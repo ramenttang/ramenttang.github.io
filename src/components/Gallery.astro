@@ -1,0 +1,7 @@
+---
+interface Props { images: string[]; alt: string; compact?: boolean }
+const { images, alt, compact = false } = Astro.props;
+---
+<div class:list={['gallery', { compact }]}>
+  {images.map((src, index) => <figure><img src={src} alt={`${alt} ${index + 1}`} loading="lazy" /></figure>)}
+</div>

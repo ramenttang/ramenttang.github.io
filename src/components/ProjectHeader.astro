@@ -1,0 +1,13 @@
+---
+interface Props { no: string; title: string; type: string; tools: string; period?: string; role?: string }
+const { no, title, type, tools, period, role } = Astro.props;
+---
+<header class="project-header">
+  <span>{no}</span>
+  <div><h2>{title}</h2><p>{type}</p></div>
+  <dl>
+    {period && <div><dt>기간</dt><dd>{period}</dd></div>}
+    {role && <div><dt>담당</dt><dd>{role}</dd></div>}
+    <div><dt>도구</dt><dd>{tools}</dd></div>
+  </dl>
+</header>

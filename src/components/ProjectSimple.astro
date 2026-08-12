@@ -1,0 +1,11 @@
+---
+import ProjectHeader from './ProjectHeader.astro';
+import Gallery from './Gallery.astro';
+interface Props { id: string; no: string; title: string; type: string; tools: string; text: string; images: string[] }
+const { id, no, title, type, tools, text, images } = Astro.props;
+---
+<article class="project" id={`project-${id}`} data-project-panel={id} role="tabpanel" hidden>
+  <ProjectHeader no={no} title={title} type={type} tools={tools} />
+  <p class="simple-text">{text}</p>
+  <Gallery images={images} alt={title} />
+</article>

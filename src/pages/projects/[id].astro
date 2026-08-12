@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { projects } from '../../data/projects';
+export function getStaticPaths() { return projects.map(project => ({ params: { id: project.id }, props: { project } })); }
+const { project } = Astro.props;
+const current = projects.findIndex(item => item.id === project.id);
+const next = projects[(current + 1) % projects.length];
+---
+<Layout title={`${project.title} — 선다연 포트폴리오`} description={project.summary}>
+  <header class="site-header"><a class="logo" href="/">선다연</a><nav><a href="/#work">전체 작업</a><a href="/#about">소개</a><a href="mailto:st_kite@naver.com">연락</a></nav></header>
+  <main class="project-page">
+    <section class="project-hero shell">
+      <a class="back" href="/#work">← 전체 작업</a>
+      <p class="kicker">{String(current + 1).padStart(2,'0')} · {project.category}</p>
+      <h1>{project.title}</h1><p class="subtitle">{project.subtitle}</p>
+      <div class="project-facts"><div><span>기간</span><p>{project.period || project.year}</p></div><div><span>담당</span><p>{project.role || project.category}</p></div><div><span>도구</span><p>{project.tools.join(' · ')}</p></div></div>
+    </section>
+    <div class:list={['project-cover', {contain: project.contain}]}><img src={project.cover} alt={`${project.title} 대표 이미지`} /></div>
+    <section class="project-body shell">
+      <div class="overview"><h2>프로젝트 개요</h2><p>{project.overview || project.summary}</p></div>
+      {project.sections?.map(section => <div class="case-section"><h2>{section.title}</h2><div><p>{section.body}</p>{section.items && <ul>{section.items.map(item => <li>{item}</li>)}</ul>}</div></div>)}
+      <div class="gallery-heading"><h2>작업 이미지</h2><p>{project.images.length} images</p></div>
+      <div class:list={['detail-gallery', {compact: project.contain}]}>{project.images.map((src, i) => <figure><img src={src} alt={`${project.title} 작업 이미지 ${i+1}`} loading="lazy" /></figure>)}</div>
+    </section>
+    <a class="next-project shell" href={`/projects/${next.id}/`}><span>다음 프로젝트</span><h2>{next.title}</h2><b>→</b></a>
+  </main>
+  <footer class="footer shell"><div><span>선다연 · Portfolio 2026</span><a href="mailto:st_kite@naver.com">st_kite@naver.com</a></div></footer>
+</Layout>
+<style is:global>@import '../../styles/site.css';</style>

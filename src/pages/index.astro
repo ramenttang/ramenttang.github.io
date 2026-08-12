@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { projects } from '../data/projects';
+const selected = projects.slice(0, 5);
+const archive = projects.slice(5);
+---
+<Layout title="선다연 — UI/UX · 3D · 콘텐츠 디자이너">
+  <header class="site-header">
+    <a class="logo" href="#top">선다연</a>
+    <nav><a href="#work">작업</a><a href="#about">소개</a><a href="mailto:st_kite@naver.com">연락</a></nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <p class="kicker">PORTFOLIO 2026</p>
+      <div class="hero-copy">
+        <h1>UI/UX, 3D, 생성형 AI를 연결해<br/>디지털 경험과 비주얼 콘텐츠를 설계합니다.</h1>
+        <p>소프트웨어 공학의 논리 위에 감각적인 시각 언어를 더하는 디자이너 <strong>선다연</strong>입니다.</p>
+      </div>
+      <a class="hero-link" href="#work">대표 작업 보기 <span>↓</span></a>
+    </section>
+
+    <section id="work" class="section shell">
+      <header class="section-heading"><p>대표 작업</p><h2>문제와 과정을 중심으로<br/>선별한 작업입니다.</h2></header>
+      <div class="selected-grid">
+        {selected.map((project, index) => (
+          <a class:list={['work-card', {large: index < 2}]} href={`/projects/${project.id}/`}>
+            <div class:list={['work-thumb', {contain: project.contain}]}><img src={project.cover} alt={`${project.title} 대표 이미지`} /></div>
+            <div class="work-info"><span>{String(index + 1).padStart(2,'0')} · {project.category}</span><h3>{project.title}</h3><p>{project.summary}</p><b>프로젝트 보기 →</b></div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="archive shell">
+      <header><p>작업 아카이브</p><h2>그 밖의 작업</h2></header>
+      <div class="archive-list">
+        {archive.map((project, index) => (
+          <a href={`/projects/${project.id}/`}>
+            <span>{String(index + 6).padStart(2,'0')}</span>
+            <div class:list={['archive-thumb', {contain: project.contain}]}><img src={project.cover} alt="" loading="lazy" /></div>
+            <div class="archive-title"><h3>{project.title}</h3><small>{project.subtitle}</small></div>
+            <p>{project.tools.join(' · ')}</p><b>→</b>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section id="about" class="section about shell">
+      <header class="section-heading"><p>소개</p><h2>낯선 도구를 빠르게 익히고,<br/>서로 다른 영역을 연결합니다.</h2></header>
+      <div class="about-intro"><p>다양한 분야를 향한 호기심을 원동력 삼아 낯선 툴을 빠르게 흡수합니다. 3D 공간부터 모바일 UI/UX 화면까지, 디자인과 기술을 넘나들며 필요한 역량을 유기적으로 연결합니다.</p><p>저에게 새로운 소프트웨어와 트렌드는 가능성을 시험해 볼 캔버스입니다. 도구 자체보다 문제와 경험에 집중하며, 머릿속 상상을 실제로 사용할 수 있는 결과물로 완성합니다.</p></div>
+
+      <div class="proof-grid">
+        <article><span>01</span><h3>실무 적응력</h3><p>펄어비스 인턴십에서 새로운 엔진 환경과 모션캡처 데이터 최적화 파이프라인을 익혔습니다. 캐릭터와 프랍의 상호작용 및 충돌을 수정하며 기획된 움직임이 실제 환경에서 구동되도록 완성도를 높였습니다.</p></article>
+        <article><span>02</span><h3>시각화와 수익화</h3><p>10개월간 1인 상점을 운영하며 고객의 모호한 요구를 3D 아바타로 시각화했습니다. 가이드라인과 페이셜 세팅으로 소통의 오차를 줄이고 누적 수익 200만 원을 만들었습니다.</p></article>
+        <article><span>03</span><h3>빠른 학습과 화면 설계</h3><p>Figma와 Illustrator를 단기간에 독학하고 CHECKPASS의 전체 UI/UX 기획을 총괄했습니다. 복잡한 시스템을 직관적이고 일관된 화면으로 풀어냈습니다.</p></article>
+      </div>
+
+      <div class="profile-grid">
+        <div><h3>활용 도구</h3><dl><div><dt>디자인</dt><dd>Figma · Photoshop · Illustrator</dd></div><div><dt>3D</dt><dd>Blender · Maya · Substance 3D Painter · Unity</dd></div></dl></div>
+        <div><h3>업무 영역</h3><p>UI/UX 디자인<br/>3D 디자인<br/>콘텐츠 마케팅<br/>커뮤니케이션<br/>IT 기술 이해</p></div>
+        <div><h3>주요 경력</h3><dl><div><dt>2024.07 – 12</dt><dd>펄어비스 PA아트센터 모션팀</dd></div><div><dt>2025.10 – 2026.06</dt><dd>카페봄 카페 매니저</dd></div><div><dt>2025.02</dt><dd>한국교통대학교 소프트웨어전공 졸업</dd></div></dl></div>
+      </div>
+      <a class="profile-link" href="/about/">전체 경력과 활용 능력 보기 →</a>
+    </section>
+  </main>
+
+  <footer class="footer shell"><p>함께 만들 이야기가 있다면</p><a href="mailto:st_kite@naver.com">st_kite@naver.com</a><div><span>선다연 · Multidisciplinary Designer</span><span>© 2026</span></div></footer>
+</Layout>
+<style is:global>@import '../styles/site.css';</style>
