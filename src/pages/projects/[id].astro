@@ -20,7 +20,7 @@ const next = projects[(current + 1) % projects.length];
       <div class="overview"><h2>프로젝트 개요</h2><p>{project.overview || project.summary}</p></div>
       {project.sections?.map(section => <div class="case-section"><h2>{section.title}</h2><div><p>{section.body}</p>{section.items && <ul>{section.items.map(item => <li>{item}</li>)}</ul>}</div></div>)}
       <div class="gallery-heading"><h2>작업 이미지</h2><p>{project.images.length} images</p></div>
-      <div class:list={['detail-gallery', {compact: project.contain, checkpass: project.id === 'checkpass'}]}>{project.images.map((src, i) => <figure class:list={{ 'checkpass-detail': project.id === 'checkpass' && /(?:slide06-image45|slide07-image5[1-9])\.png$/.test(src) }}><img src={src} alt={`${project.title} 작업 이미지 ${i+1}`} loading="lazy" /></figure>)}</div>
+      <div class:list={['detail-gallery', {compact: project.contain, checkpass: project.id === 'checkpass', 'two-images': project.images.length === 2}]}>{project.images.map((src, i) => <figure class:list={{ 'checkpass-detail': project.id === 'checkpass' && /(?:slide06-image45|slide07-image5[1-9])\.png$/.test(src) }}><img src={src} alt={`${project.title} 작업 이미지 ${i+1}`} loading="lazy" /></figure>)}</div>
     </section>
     <a class="next-project shell" href={`/projects/${next.id}/`}><span>다음 프로젝트</span><h2>{next.title}</h2><b>→</b></a>
   </main>
