@@ -35,7 +35,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 'seamspace', title: 'SEAMSPACE', subtitle: 'Visual Asset Renewal', category: 'Visual', year: '2026',
+    id: 'seamspace', title: 'SEAMSPACE', subtitle: 'Visual Asset Renewal', category: 'Visual', year: '2026', period: '2026.07~',
     tools: ['Generative AI', 'Photoshop'],
     summary: 'AI 생성과 정교한 리터칭을 연결해 글로벌 에듀테크 서비스의 감정·취미·일상 에셋을 구축.',
     detail: '캐릭터 일관성을 유지하는 프롬프트 기준을 만들고, Photoshop으로 형태 오류와 디테일을 보정했습니다. 글로벌 사용자를 위한 이모티콘 3종과 다이어리 스티커 7종을 기획·제작했습니다.',
@@ -50,27 +50,27 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 'subculture', title: 'ALTER EGO', subtitle: 'Subculture Character Study', category: '3D', year: '2025',
+    id: 'subculture', title: 'ALTER EGO', subtitle: 'Subculture Character Study', category: '3D', year: '2025', period: '2026.06',
     tools: ['Blender'], summary: '스타일라이즈드 비율과 표정, 캐릭터의 실루엣을 탐구한 서브컬쳐풍 모델링.',
     cover: asset('04-3d-modeling-subculture', 'slide10-image74.png'), images: Array.from({length: 5}, (_, i) => asset('04-3d-modeling-subculture', `slide10-image${74+i}.png`)), featured: true,
   },
   {
-    id: 'lighting-one', title: 'TWO LIGHTS', subtitle: 'Natural / Moonlight', category: '3D', year: '2024',
+    id: 'lighting-one', title: 'TWO LIGHTS', subtitle: 'Natural / Moonlight', category: '3D', year: '2024', period: '2025',
     tools: ['Lighting', 'Rendering'], summary: '같은 공간, 다른 빛. 자연광과 푸른 달빛이 공간의 정서를 바꾸는 방식에 대한 연구.',
     cover: asset('05-lighting-rendering-1', 'slide11-image80.jpg'), images: [80,81].map(n => asset('05-lighting-rendering-1', `slide11-image${n}.jpg`)), featured: true,
   },
   {
-    id: 'modeling-maya', title: 'FORM STUDIES', subtitle: 'Maya Modeling Collection', category: '3D', year: '2024',
+    id: 'modeling-maya', title: 'FORM STUDIES', subtitle: 'Maya Modeling Collection', category: '3D', year: '2024', period: '2025',
     tools: ['Maya'], summary: '캐릭터와 소품의 형태, 실루엣, 폴리곤 구조를 탐구한 모델링 컬렉션.',
     cover: asset('02-3d-modeling-maya', 'slide08-image61.png'), images: Array.from({length: 8}, (_, i) => asset('02-3d-modeling-maya', `slide08-image${60+i}.png`)), contain: true,
   },
   {
-    id: 'modeling-multi', title: 'CROSS DCC', subtitle: 'Character / Environment', category: '3D', year: '2024',
+    id: 'modeling-multi', title: 'CROSS DCC', subtitle: 'Character / Environment', category: '3D', year: '2024', period: '2025',
     tools: ['Maya', 'ZBrush', 'Blender'], summary: '하드서페이스와 오가닉 오브젝트를 각 도구의 강점에 맞춰 연결한 다중 DCC 작업.',
     cover: asset('03-3d-modeling-multi', 'slide09-image68.png'), images: Array.from({length: 6}, (_, i) => asset('03-3d-modeling-multi', `slide09-image${68+i}.png`)),
   },
   {
-    id: 'lighting-two', title: 'LUMINOUS SCENES', subtitle: 'Product / Environment', category: '3D', year: '2024',
+    id: 'lighting-two', title: 'LUMINOUS SCENES', subtitle: 'Product / Environment', category: '3D', year: '2024', period: '2025',
     tools: ['Lighting', 'Rendering'], summary: '재료의 물성과 장소의 내러티브를 빛으로 드러낸 프로덕트·환경 라이팅.',
     cover: asset('06-lighting-rendering-2', 'slide12-image83.png'), images: [asset('06-lighting-rendering-2', 'slide12-image82.png'), asset('06-lighting-rendering-2', 'slide12-image83.png'), asset('06-lighting-rendering-2', 'slide12-image84.jpg')],
   },
@@ -85,7 +85,7 @@ export const projects: Project[] = [
     cover: asset('09-template-design', 'slide17-image98.png'), images: Array.from({length: 9}, (_, i) => asset('09-template-design', `slide17-image${98+i}.png`)),
   },
   {
-    id: 'ai-image', title: 'PROMPTED WORLDS', subtitle: 'Text-to-Image Experiments', category: 'Visual', year: '2026',
+    id: 'ai-image', title: 'PROMPTED WORLDS', subtitle: 'Text-to-Image Experiments', category: 'Visual', year: '2026', period: '2026',
     tools: ['ComfyUI', 'Z-Image-Turbo'], summary: '텍스트 프롬프트만으로 스타일과 장면을 통제하는 생성형 이미지 실험.',
     cover: asset('10-ai-image', 'slide18-image113.png'), images: Array.from({length: 8}, (_, i) => asset('10-ai-image', `slide18-image${107+i}.png`)),
   },
