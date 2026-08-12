@@ -9,6 +9,7 @@ export type Project = {
   detail?: string;
   cover: string;
   images: string[];
+  videos?: { id: string; title: string; description: string; url: string }[];
   featured?: boolean;
   contain?: boolean;
   period?: string;
@@ -88,5 +89,19 @@ export const projects: Project[] = [
     id: 'ai-image', title: 'PROMPTED WORLDS', subtitle: 'Text-to-Image Experiments', category: 'Visual', year: '2026', period: '2026',
     tools: ['ComfyUI', 'Z-Image-Turbo'], summary: '텍스트 프롬프트만으로 스타일과 장면을 통제하는 생성형 이미지 실험.',
     cover: asset('10-ai-image', 'slide18-image113.png'), images: Array.from({length: 8}, (_, i) => asset('10-ai-image', `slide18-image${107+i}.png`)),
+  },
+  {
+    id: 'motion-studies', title: 'MOTION STUDIES', subtitle: 'Animation / Post-processing', category: '3D', year: '2025',
+    tools: ['Maya', 'Nuke'],
+    summary: 'Maya 캐릭터·오브젝트 애니메이션과 Nuke 포스트 프로세싱을 담은 모션 작업 모음.',
+    cover: 'https://i.ytimg.com/vi/pASlU1ejjY0/maxresdefault.jpg',
+    images: [],
+    role: 'Animation · Post-processing',
+    overview: 'Maya에서 제작한 걷기와 바운싱볼 애니메이션, Nuke에서 진행한 포스트 프로세싱 결과를 하나의 페이지에 모았습니다.',
+    videos: [
+      { id: 'pASlU1ejjY0', title: 'Nuke Post-processing', description: 'Nuke에서 합성 및 포스트 프로세싱을 진행한 영상입니다.', url: 'https://youtu.be/pASlU1ejjY0' },
+      { id: 'GXQlyXxeAM4', title: 'Walk Cycle Animation', description: 'Maya에서 캐릭터 걷기 동작을 애니메이팅한 영상입니다.', url: 'https://youtu.be/GXQlyXxeAM4' },
+      { id: 'WLL6ZdyTkJQ', title: 'Bouncing Ball Animation', description: 'Maya에서 바운싱볼의 무게감과 타이밍을 애니메이팅한 영상입니다.', url: 'https://youtu.be/WLL6ZdyTkJQ' },
+    ],
   },
 ];
