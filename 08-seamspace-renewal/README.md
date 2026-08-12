@@ -1,4 +1,4 @@
-# Simspace Renewal — Visual Asset Design
+# Seamspace Renewal — Visual Asset Design
 
 > AI 이미지 생성과 포토샵 리터칭으로 심스페이스 리뉴얼에 필요한 비주얼 에셋을 만든 프로젝트.
 
@@ -8,7 +8,7 @@
 | 담당 업무 | 신규 이모티콘, 스티커, 테마 기획 및 디자인 |
 | 사용 툴 | AI 이미지 생성 플랫폼, Adobe Photoshop |
 | 핵심 역량 | 프롬프트 엔지니어링을 통한 아트워크 생성, 디테일 리터칭, UI 환경에 맞춘 에셋 최적화 |
-| 태그 | `#Simspace` `#AI_Asset` `#Emoticon` `#Sticker` `#Photoshop` |
+| 태그 | `#Seamspace` `#AI_Asset` `#Emoticon` `#Sticker` `#Photoshop` |
 
 ---
 

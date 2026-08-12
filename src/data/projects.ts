@@ -35,12 +35,12 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 'simspace', title: 'SIMSPACE', subtitle: 'Visual Asset Renewal', category: 'Visual', year: '2026',
+    id: 'seamspace', title: 'SEAMSPACE', subtitle: 'Visual Asset Renewal', category: 'Visual', year: '2026',
     tools: ['Generative AI', 'Photoshop'],
     summary: 'AI 생성과 정교한 리터칭을 연결해 글로벌 에듀테크 서비스의 감정·취미·일상 에셋을 구축.',
     detail: '캐릭터 일관성을 유지하는 프롬프트 기준을 만들고, Photoshop으로 형태 오류와 디테일을 보정했습니다. 글로벌 사용자를 위한 이모티콘 3종과 다이어리 스티커 7종을 기획·제작했습니다.',
-    cover: asset('08-simspace-renewal', 'slide15-image87.png'),
-    images: ['slide15-image90.png','slide15-image87.png','slide15-image88.png','slide15-image89.png','slide16-image91.png','slide16-image92.png','slide16-image93.png','slide16-image94.png','slide16-image95.png','slide16-image96.png','slide16-image97.png'].map(x => asset('08-simspace-renewal', x)), featured: true, contain: true,
+    cover: asset('08-seamspace-renewal', 'slide15-image87.png'),
+    images: ['slide15-image90.png','slide15-image87.png','slide15-image88.png','slide15-image89.png','slide16-image91.png','slide16-image92.png','slide16-image93.png','slide16-image94.png','slide16-image95.png','slide16-image96.png','slide16-image97.png'].map(x => asset('08-seamspace-renewal', x)), featured: true, contain: true,
     role: '신규 이모티콘 · 스티커 · 테마 기획 및 디자인',
     overview: '리뉴얼된 심스페이스 플랫폼의 비주얼 아이덴티티에 맞춰 캐릭터 이모티콘, 다이어리 꾸미기 스티커, 테마 등 신규 비주얼 에셋을 기획·디자인했습니다. 순수 생성 결과물을 사용하지 않고 AI로 후보를 확보한 뒤 Photoshop으로 서비스 환경에 맞게 마감했습니다.',
     sections: [

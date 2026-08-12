@@ -23,7 +23,7 @@
 ├── 05-lighting-rendering-1/    ← 라이팅 — 자연광 vs 달빛
 ├── 06-lighting-rendering-2/    ← 라이팅 — 프로덕트 / 환경
 ├── 07-compositing/             ← 합성 — Nuke (산맥 + 나비)
-├── 08-simspace-renewal/        ← 심스페이스 리뉴얼 (이모티콘·스티커)
+├── 08-seamspace-renewal/        ← 심스페이스 리뉴얼 (이모티콘·스티커)
 ├── 09-template-design/         ← '농담곰' PPT 템플릿
 └── 10-ai-image/                ← ComfyUI + Z-Image-Turbo
 ```
@@ -41,7 +41,7 @@
 | 5 | `05-lighting-rendering-1/` | Lighting — Natural/Moonlight | 자연광 vs 푸른 달빛 인테리어 라이팅 | (3D) |
 | 6 | `06-lighting-rendering-2/` | Lighting — Product/Env | 일렉기타·반딧불이 정원·호수 책장 라이팅 | (3D) |
 | 7 | `07-compositing/` | Compositing | 산맥 + 거대 나비 실루엣 합성 | Nuke |
-| 8 | `08-simspace-renewal/` | Simspace Renewal | AI + Photoshop으로 이모티콘·스티커 신규 제작 | AI 생성, Photoshop |
+| 8 | `08-seamspace-renewal/` | Seamspace Renewal | AI + Photoshop으로 이모티콘·스티커 신규 제작 | AI 생성, Photoshop |
 | 9 | `09-template-design/` | Template Design | '농담곰' 캐릭터 PPT 템플릿 제작·블로그 배포 | PPT |
 | 10 | `10-ai-image/` | AI Image | 텍스트만으로 이미지 생성 | ComfyUI, Z-Image-Turbo |
 
