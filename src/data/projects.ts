@@ -26,7 +26,7 @@ export const projects: Project[] = [
     summary: '블루투스 Beacon 기술을 매일 쓰는 직관적인 출결 경험으로 바꾼 웹·iOS 애플리케이션.',
     detail: '로고와 컬러 시스템부터 웹·모바일 전체 화면까지 UI/UX 기획과 디자인을 전담했습니다. 기술은 보이지 않게, 출결 상태는 명확하게 전달하는 정보 위계에 집중했습니다.',
     cover: asset('01-checkpass', 'slide06-image50.png'),
-    images: ['slide06-image45.png','slide06-image46.png','slide06-image50.png','slide07-image51.png','slide07-image52.png','slide07-image53.png','slide07-image54.png','slide07-image55.png','slide07-image56.png','slide07-image57.png','slide07-image58.png','slide07-image59.png'].map(x => asset('01-checkpass', x)), featured: true,
+    images: ['slide06-image45.png','slide06-image46.png','slide06-image50.png','slide07-image51.png','slide07-image52.png','slide07-image53.png','slide07-image54.png','slide07-image55.png','slide07-image56.png','slide07-image57.png','slide07-image58.png','slide07-image59.png','CHECKPASS_제출용.png','CHECKPASS_제출용_(1).png'].map(x => asset('01-checkpass', x)), featured: true,
     period: '2023.09.01 – 2023.11.30', role: 'UI/UX 기획 및 디자인',
     overview: '학생들이 매일 사용하는 출결 과정을 더 간편하게 만들기 위해 Bluetooth Beacon을 활용한 웹·iOS 애플리케이션을 설계했습니다. 서비스 로고와 폰트 선정부터 컬러 시스템, 전체 UI/UX 화면 구성을 전담했습니다.',
     sections: [
@@ -57,7 +57,7 @@ export const projects: Project[] = [
   {
     id: 'lighting-one', title: 'TWO LIGHTS', subtitle: 'Natural / Moonlight', category: '3D', year: '2024',
     tools: ['Lighting', 'Rendering'], summary: '같은 공간, 다른 빛. 자연광과 푸른 달빛이 공간의 정서를 바꾸는 방식에 대한 연구.',
-    cover: asset('05-lighting-rendering-1', 'slide11-image80.png'), images: [80,81].map(n => asset('05-lighting-rendering-1', `slide11-image${n}.png`)), featured: true,
+    cover: asset('05-lighting-rendering-1', 'slide11-image80.jpg'), images: [80,81].map(n => asset('05-lighting-rendering-1', `slide11-image${n}.jpg`)), featured: true,
   },
   {
     id: 'modeling-maya', title: 'FORM STUDIES', subtitle: 'Maya Modeling Collection', category: '3D', year: '2024',
@@ -72,7 +72,7 @@ export const projects: Project[] = [
   {
     id: 'lighting-two', title: 'LUMINOUS SCENES', subtitle: 'Product / Environment', category: '3D', year: '2024',
     tools: ['Lighting', 'Rendering'], summary: '재료의 물성과 장소의 내러티브를 빛으로 드러낸 프로덕트·환경 라이팅.',
-    cover: asset('06-lighting-rendering-2', 'slide12-image83.png'), images: [82,83,84].map(n => asset('06-lighting-rendering-2', `slide12-image${n}.png`)),
+    cover: asset('06-lighting-rendering-2', 'slide12-image83.png'), images: [asset('06-lighting-rendering-2', 'slide12-image82.png'), asset('06-lighting-rendering-2', 'slide12-image83.png'), asset('06-lighting-rendering-2', 'slide12-image84.jpg')],
   },
   {
     id: 'compositing', title: 'BUTTERFLY VALLEY', subtitle: 'Atmospheric Compositing', category: 'Visual', year: '2024',
