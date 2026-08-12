@@ -52,7 +52,7 @@ export const projects: Project[] = [
   {
     id: 'subculture', title: 'ALTER EGO', subtitle: 'Subculture Character Study', category: '3D', year: '2025',
     tools: ['Blender'], summary: '스타일라이즈드 비율과 표정, 캐릭터의 실루엣을 탐구한 서브컬쳐풍 모델링.',
-    cover: asset('04-3d-modeling-subculture', 'slide10-image74.png'), images: Array.from({length: 6}, (_, i) => asset('04-3d-modeling-subculture', `slide10-image${74+i}.png`)), featured: true,
+    cover: asset('04-3d-modeling-subculture', 'slide10-image74.png'), images: Array.from({length: 5}, (_, i) => asset('04-3d-modeling-subculture', `slide10-image${74+i}.png`)), featured: true,
   },
   {
     id: 'lighting-one', title: 'TWO LIGHTS', subtitle: 'Natural / Moonlight', category: '3D', year: '2024',
