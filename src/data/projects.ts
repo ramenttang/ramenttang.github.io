@@ -10,6 +10,7 @@ export type Project = {
   cover: string;
   images: string[];
   videos?: { id: string; title: string; description: string; url: string }[];
+  activity?: { title: string; items: { title: string; body: string }[]; images: string[] };
   featured?: boolean;
   contain?: boolean;
   period?: string;
@@ -42,7 +43,15 @@ export const projects: Project[] = [
     detail: '캐릭터 일관성을 유지하는 프롬프트 기준을 만들고, Photoshop으로 형태 오류와 디테일을 보정했습니다. 글로벌 사용자를 위한 이모티콘 3종과 다이어리 스티커 7종을 기획·제작했습니다.',
     cover: asset('08-seamspace-renewal', 'slide15-image90.png'),
     images: ['slide15-image87.png','slide15-image88.png','slide15-image89.png','slide16-image91.png','slide16-image92.png','slide16-image93.png','slide16-image94.png','slide16-image95.png','slide16-image96.png','slide16-image97.png'].map(x => asset('08-seamspace-renewal', x)), featured: true, contain: true,
-    role: '신규 이모티콘 · 스티커 · 테마 기획 및 디자인',
+    activity: {
+      title: "신규 '우주' 테마 UI/UX",
+      items: [
+        { title: "신규 '우주' 테마 UI/UX 기획 및 디자인", body: '심스페이스 에듀 서비스 톤앤매너에 맞춘 신규 테마 콘셉트를 도출하고 전반적인 비주얼 아트워크를 제작했습니다.' },
+        { title: '반응형 환경 최적화 및 사용성 검증', body: '다양한 해상도를 고려한 다수의 시안을 제작하고, 최종 디자인에 대한 실사용 목업(Mock-up)을 구현해 사용성을 검증했습니다.' },
+        { title: '브랜드 경험 강화를 위한 시스템 컴포넌트 구축', body: '내비게이션 바(GNB) 아이콘을 디자인하고 기본 프로필, 채팅방, 잠금화면 등 서비스 핵심 화면의 디자인 바리에이션을 전개해 시각적 통일성을 확보했습니다.' },
+      ],
+      images: ['우주1.png','우주2.png','우주3.png','우주4.png','전체목업.png'].map(x => asset('08-seamspace-renewal', x)),
+    },    role: '신규 이모티콘 · 스티커 · 테마 기획 및 디자인',
     overview: '리뉴얼된 심스페이스 플랫폼의 비주얼 아이덴티티에 맞춰 캐릭터 이모티콘, 다이어리 꾸미기 스티커, 테마 등 신규 비주얼 에셋을 기획·디자인했습니다. 순수 생성 결과물을 사용하지 않고 AI로 후보를 확보한 뒤 Photoshop으로 서비스 환경에 맞게 마감했습니다.',
     sections: [
       { title: '작업 과정', body: '생성부터 서비스 적용까지 일관된 제작 기준을 세웠습니다.', items: ['플랫폼의 톤앤매너 분석과 일관된 스타일을 위한 프롬프트 설계', '다수의 원본 이미지 생성 후 콘셉트에 맞는 시안 선별', '형태 오류 수정, 색조 보정, 외곽선 정리 등 디테일 리터칭', 'UI와 디바이스 해상도에 맞춘 배경 투명화 및 리사이징'] },
